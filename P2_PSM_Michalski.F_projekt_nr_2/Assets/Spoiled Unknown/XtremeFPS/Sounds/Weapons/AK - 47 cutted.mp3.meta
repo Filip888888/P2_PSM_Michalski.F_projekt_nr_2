@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: 44b6c39ee8df15a44aba4438bd084f5d
-AssetOrigin:
-  serializedVersion: 1
-  productId: 282203
-  packageName: 'XtremeFPS: First Person Controller'
-  packageVersion: 1.1.0
-  assetPath: Assets/Spoiled Unknown/XtremeFPS/Sounds/Weapons/M4 Carbine.wav
-  uploadId: 688664
+guid: 4e1a463a202e8624585abc5c3d19cb7b
 AudioImporter:
   externalObjects: {}
   serializedVersion: 8

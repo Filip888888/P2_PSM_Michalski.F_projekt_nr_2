@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Pistol_Ammo_Chest : MonoBehaviour
+public class Shothun_Ammo_Chest : MonoBehaviour
 {
-    Pistol_Shoot pistol;
+    Shotgun_Shoot shotgun;
     private bool Opened = false;
     private float min_angle = -130f;
     private float alpha = -90f;
@@ -11,13 +11,13 @@ public class Pistol_Ammo_Chest : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        pistol = FindObjectOfType<Pistol_Shoot>();
+        shotgun = FindObjectOfType<Shotgun_Shoot>();
     }
 
     // Update is called once per frame
     void Update()
     {
-     
+
         if (Opened)
         {
             alpha -= speed * Time.deltaTime;
@@ -29,17 +29,17 @@ public class Pistol_Ammo_Chest : MonoBehaviour
         }
 
         case_door.transform.localRotation = Quaternion.Euler(alpha, 0f, 0f);
-        
+
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player") && !Opened && pistol.current_ammo != pistol.max_ammo) {
-            pistol.current_ammo = pistol.max_ammo;
-            pistol.ammo.text = pistol.max_ammo.ToString() + "/" + pistol.max_ammo.ToString();
+        if (collision.gameObject.CompareTag("Player") && !Opened && shotgun.current_ammo != shotgun.max_ammo)
+        {
+            shotgun.current_ammo = shotgun.max_ammo;
+            shotgun.ammo.text = shotgun.max_ammo.ToString() + "/" + shotgun.max_ammo.ToString();
             Opened = true;
         }
     }
 
 }
-        
