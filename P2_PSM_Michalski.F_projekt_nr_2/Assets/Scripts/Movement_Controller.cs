@@ -63,6 +63,19 @@ public class Movement_Controller : MonoBehaviour
                 rb.AddForce(Vector3.up * (jumpforce - 2), ForceMode.Impulse);
                 isGrounded = false;
             }
+
+        if (isClimbing)
+        {
+            if (Input.GetKey(KeyCode.W) && isClimbing)
+            {
+                 rb.AddForce(Vector3.up * thrust);
+            }
+
+            if(Input.GetKey(KeyCode.S) && isClimbing)
+            {
+                rb.AddForce(Vector3.down * thrust);
+            }
+        }
     }
 
 
@@ -72,6 +85,12 @@ public class Movement_Controller : MonoBehaviour
         {
             isGrounded = true;
         }
+
+        if (collision.gameObject.CompareTag("ladder"))
+        {
+            isClimbing = true;
+        }
+
     }
 
     private void OnCollisionExit(Collision collision)
@@ -80,6 +99,12 @@ public class Movement_Controller : MonoBehaviour
         {
             isGrounded = false;
         }
+
+        if (collision.gameObject.CompareTag("ladder"))
+        {
+            isClimbing = false;
+        }
+
     }
 
 
