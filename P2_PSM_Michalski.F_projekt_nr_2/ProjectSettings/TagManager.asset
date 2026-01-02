@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - ladder
   - zombie
+  - head
   layers:
   - Default
   - TransparentFX

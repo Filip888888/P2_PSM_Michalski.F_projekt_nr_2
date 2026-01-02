@@ -5,6 +5,7 @@ public class Follor_Player_NavMesh : MonoBehaviour
 {
     private Transform player;
     private NavMeshAgent agent;
+    public float health = 100f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
