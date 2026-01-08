@@ -33,6 +33,7 @@ public class Max_Ammo_Chest : MonoBehaviour
             snipe.current_ammo = snipe.max_ammo;
             shotgun.current_ammo = shotgun.max_ammo;
             pistol.current_ammo = pistol.max_ammo;
+            Destroy(gameObject);
         }
     }
 
