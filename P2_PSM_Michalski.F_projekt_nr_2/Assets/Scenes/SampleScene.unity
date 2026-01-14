@@ -763,7 +763,12 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1300, y: 500, z: 800}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &163162146
+--- !u!4 &163162147 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
+  m_PrefabInstance: {fileID: 712073705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &163162148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -772,15 +777,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 163162142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e43fc30e490a94c8cef6ddfc9a8838, type: 3}
+  m_Script: {fileID: 11500000, guid: c3134b866c92e1a46b015524b5ed0874, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pistol_Ammo_Chest
+  m_EditorClassIdentifier: Assembly-CSharp::ChestManager
+  gun_number: 2
   case_door: {fileID: 742943791}
---- !u!4 &163162147 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
-  m_PrefabInstance: {fileID: 712073705}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &165580667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1229,7 +1230,7 @@ PrefabInstance:
       addedObject: {fileID: 211746349}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 211746348}
+      addedObject: {fileID: 211746351}
   m_SourcePrefab: {fileID: 100100000, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
 --- !u!4 &211746346 stripped
 Transform:
@@ -1241,19 +1242,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
   m_PrefabInstance: {fileID: 211746345}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &211746348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211746347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8722eeeaadfac41b073c8a8fc1a54b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::M4_Ammo_Chest
-  case_door: {fileID: 211746350}
 --- !u!65 &211746349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1280,6 +1268,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6080596665305963236, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
   m_PrefabInstance: {fileID: 211746345}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &211746351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211746347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3134b866c92e1a46b015524b5ed0874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChestManager
+  gun_number: 5
+  case_door: {fileID: 211746350}
 --- !u!1 &227755525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2262086191923089530, guid: 38be789410d69ef40a29459dfa506f11, type: 3}
@@ -2806,7 +2808,7 @@ PrefabInstance:
       addedObject: {fileID: 449327587}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 449327586}
+      addedObject: {fileID: 449327592}
   m_SourcePrefab: {fileID: 100100000, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
 --- !u!1 &449327584 stripped
 GameObject:
@@ -2818,19 +2820,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6080596665305963236, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
   m_PrefabInstance: {fileID: 449327583}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &449327586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449327584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5a3dcd142475be41b6068b7f0fac0a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Shothun_Ammo_Chest
-  case_door: {fileID: 449327585}
 --- !u!65 &449327587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2857,6 +2846,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
   m_PrefabInstance: {fileID: 449327583}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &449327592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449327584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3134b866c92e1a46b015524b5ed0874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChestManager
+  gun_number: 3
+  case_door: {fileID: 449327585}
 --- !u!1 &455012495 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 856507056471939747, guid: cf719d43f3f5d954fbe0879e403e6c98, type: 3}
@@ -4806,7 +4809,7 @@ PrefabInstance:
       addedObject: {fileID: 163162145}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 163162146}
+      addedObject: {fileID: 163162148}
   m_SourcePrefab: {fileID: 100100000, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
 --- !u!1001 &724622995
 PrefabInstance:
@@ -5669,7 +5672,7 @@ PrefabInstance:
       addedObject: {fileID: 808601867}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 808601866}
+      addedObject: {fileID: 808601868}
   m_SourcePrefab: {fileID: 100100000, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
 --- !u!4 &808601863 stripped
 Transform:
@@ -5686,19 +5689,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
   m_PrefabInstance: {fileID: 808601862}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &808601866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808601865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b15d86bbd5009654fa79aac07517438d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ak_Ammo_Chest
-  case_door: {fileID: 808601864}
 --- !u!65 &808601867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5720,6 +5710,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1300, y: 500, z: 800}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &808601868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808601865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3134b866c92e1a46b015524b5ed0874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChestManager
+  gun_number: 1
+  case_door: {fileID: 808601864}
 --- !u!1001 &820599704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12031,7 +12035,7 @@ PrefabInstance:
       addedObject: {fileID: 1728227071}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1728227070}
+      addedObject: {fileID: 1728227072}
   m_SourcePrefab: {fileID: 100100000, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
 --- !u!4 &1728227067 stripped
 Transform:
@@ -12048,20 +12052,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 45fb3b613218da844b047d1f9349e0d6, type: 3}
   m_PrefabInstance: {fileID: 1728227066}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1728227070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728227069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39904af528960149a1887bb9c58b775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Snipe_Ammo_Chest
-  case_door: {fileID: 1728227068}
-  snipe_gun: {fileID: 115235277}
 --- !u!65 &1728227071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12083,6 +12073,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1300, y: 500, z: 800}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1728227072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728227069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3134b866c92e1a46b015524b5ed0874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChestManager
+  gun_number: 4
+  case_door: {fileID: 1728227068}
 --- !u!1001 &1734797555
 PrefabInstance:
   m_ObjectHideFlags: 0

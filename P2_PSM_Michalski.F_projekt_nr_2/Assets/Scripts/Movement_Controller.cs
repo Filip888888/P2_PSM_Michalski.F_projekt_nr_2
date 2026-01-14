@@ -79,11 +79,16 @@ public class Movement_Controller : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+
+        if(collision.gameObject.CompareTag("platform"))
+        {
+            transform.SetParent(collision.transform);
         }
 
         if (collision.gameObject.CompareTag("ladder"))
@@ -93,7 +98,7 @@ public class Movement_Controller : MonoBehaviour
 
     }
 
-    private void OnCollisionExit(Collision collision)
+    void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
@@ -105,8 +110,12 @@ public class Movement_Controller : MonoBehaviour
             isClimbing = false;
         }
 
-    }
+        if (collision.gameObject.CompareTag("platform"))
+        {
+            transform.SetParent(null);
+        }
 
+    }
 
 }
 

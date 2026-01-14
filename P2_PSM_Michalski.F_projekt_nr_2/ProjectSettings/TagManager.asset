@@ -8,6 +8,7 @@ TagManager:
   - ladder
   - zombie
   - head
+  - platform
   layers:
   - Default
   - TransparentFX

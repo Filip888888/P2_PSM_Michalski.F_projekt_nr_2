@@ -71,8 +71,15 @@ public class Zombie : MonoBehaviour
 
     public void Hit()
     {
-        Debug.Log("Player hit event");
-        hit_event?.Invoke();
+        Refueler refueler = player.GetComponent<Refueler>();
+
+        if(refueler != null)
+        {
+            refueler.Damage(1f);
+        }
+
+        //Debug.Log("Player hit event");
+        //hit_event?.Invoke();
     }
 
 }

@@ -1,4 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using NUnit.Framework.Constraints;
+using System;
 
 public class Gameplay : MonoBehaviour
 {
@@ -50,16 +58,17 @@ public class Gameplay : MonoBehaviour
             wave = 2;
             amount = 5;
         }
-        else if (kill_count > 10 && kill_count <= 40)
+        else if (kill_count > 10 && kill_count <= 25)
         {
             wave = 3;
-            amount = 30;
+            amount = 15;
         }
-        else if (kill_count > 40 && kill_count <= 80)
+        else if (kill_count > 25 && kill_count <= 30)
         {
             wave = 4;
-            amount = 40;
+            amount = 5;
         }
+
     }
 
     void spawn()
@@ -73,6 +82,11 @@ public class Gameplay : MonoBehaviour
     public void AddKill()
     {
         kill_count++;
+        
+        if (kill_count == 31 && SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            SceneManager.LoadScene("LvL_2", LoadSceneMode.Single);
+        }
     }
 
 }
