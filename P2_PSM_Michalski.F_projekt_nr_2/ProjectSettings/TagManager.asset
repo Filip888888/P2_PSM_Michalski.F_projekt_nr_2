@@ -9,6 +9,8 @@ TagManager:
   - zombie
   - head
   - platform
+  - man
+  - woman
   layers:
   - Default
   - TransparentFX

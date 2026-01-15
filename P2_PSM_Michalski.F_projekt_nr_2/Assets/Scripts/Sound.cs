@@ -1,20 +1,20 @@
 using UnityEngine;
 
-public class Helicopter_Rotor : MonoBehaviour
+public class Sound : MonoBehaviour
 {
-    public float speed = 400f;
-    public float angle = 0f;
+
+    private AudioSource sound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        sound = GetComponent<AudioSource>();
+        sound.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        angle += speed * Time.deltaTime;
-        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        
     }
 }
