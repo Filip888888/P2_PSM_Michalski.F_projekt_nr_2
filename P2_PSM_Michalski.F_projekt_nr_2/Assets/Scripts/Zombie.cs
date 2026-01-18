@@ -32,13 +32,13 @@ public class Zombie : MonoBehaviour
     void Update()
     {
         if (player == null) return;
-        
+
         anim.SetFloat("Speed", speed);
         Vector3 zomibie_position = transform.position;
 
         agent.SetDestination(player.position);
-     
-        if(Vector3.Distance(zomibie_position, player.position) < 2f)
+
+        if (Vector3.Distance(zomibie_position, player.position) < 2f)
         {
             anim.SetBool("isAttacking", true);
             speed = 0f;
@@ -53,13 +53,14 @@ public class Zombie : MonoBehaviour
             agent.isStopped = false;
         }
 
-        if(health <= 0f)
+        if (health <= 0f)
         {
             //game.kill_count += 1;
 
             int a = Random.Range(0, 8);
 
-            if (a == 2) {
+            if (a == 2)
+            {
                 Transform max_ammo_chest_spawn = Instantiate(max_ammo_chest, transform.position, Quaternion.identity);
             }
 
@@ -73,7 +74,7 @@ public class Zombie : MonoBehaviour
     {
         Refueler refueler = player.GetComponent<Refueler>();
 
-        if(refueler != null)
+        if (refueler != null)
         {
             refueler.Damage(1f);
         }

@@ -19,11 +19,11 @@ public class CameraController : MonoBehaviour
     public float camera_rotate_angle = 90f;
     private Vector3 FirstPerson = new Vector3(0f, 1.5f, 0.2f);
     Movement_Controller movement;
-
+    public Camera cam;
     Vector3 offset;
 
 
-   
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,6 +32,7 @@ public class CameraController : MonoBehaviour
         offset = FirstPerson;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         Camera.transform.position = player.transform.position + offset;
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -40,6 +41,15 @@ public class CameraController : MonoBehaviour
         Camera.transform.position = player.transform.position + offset;
 
         if (Input.GetMouseButton(1))
+        {
+            cam.fieldOfView = 30f;
+        }
+        else
+        {
+            cam.fieldOfView = 60f;
+        }
+
+        if (/*Input.GetMouseButton(1)*/Input.GetAxis("Mouse X") != 0 || (Input.GetAxis("Mouse Y") != 0))
         {
 
             float mouseX = Input.GetAxis("Mouse X") * horizontalSensitivity;
@@ -51,6 +61,10 @@ public class CameraController : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, minVerticalAngle, maxVerticalAngle);
 
             Camera.transform.localEulerAngles = new Vector3(rotationX, Camera.transform.localEulerAngles.y, 0f);
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
 
         }
     }

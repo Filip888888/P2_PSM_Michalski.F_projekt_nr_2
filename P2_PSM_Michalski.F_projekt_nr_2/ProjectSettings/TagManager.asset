@@ -11,6 +11,7 @@ TagManager:
   - platform
   - man
   - woman
+  - rocket_zombie
   layers:
   - Default
   - TransparentFX
