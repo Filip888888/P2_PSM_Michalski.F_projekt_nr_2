@@ -18,6 +18,7 @@ public class Gameplay : MonoBehaviour
     public int kill_count = 0;
     //private bool waveSpawned = false;
     private int lastWave = 0;
+
     Zombie zombie;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -67,6 +68,11 @@ public class Gameplay : MonoBehaviour
         {
             wave = 4;
             amount = 5;
+        }
+
+        if (SceneManager.GetActiveScene().name == "LvL_2")
+        {
+            player.GetComponent<Movement_Controller>().enabled = false;
         }
 
     }

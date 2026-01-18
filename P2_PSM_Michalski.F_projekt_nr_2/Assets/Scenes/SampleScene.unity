@@ -8764,6 +8764,7 @@ MonoBehaviour:
   Camera: {fileID: 330585543}
   rotatecamera: 0
   camera_rotate_angle: 90
+  cam: {fileID: 0}
 --- !u!4 &1342691613
 Transform:
   m_ObjectHideFlags: 0
