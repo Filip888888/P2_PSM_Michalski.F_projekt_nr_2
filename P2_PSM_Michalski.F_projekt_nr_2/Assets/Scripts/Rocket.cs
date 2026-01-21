@@ -8,12 +8,14 @@ public class Rocket : MonoBehaviour
     public float speed = 20f;
     private Rigidbody bullet_rb;
     public GameObject fire;
+    public Transform rocekt_position;
     
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
     {
         back_rotor = GameObject.Find("Back_Rotor").transform;
         bullet_rb = GetComponent<Rigidbody>();
+        transform.position = rocekt_position.position;
     }
 
     // Update is called once per frame
