@@ -19,6 +19,7 @@ public class M4_bullet : MonoBehaviour
         Zombie zombie = collision.gameObject.GetComponent<Zombie>();
         Second_Zombie secons_zombie = collision.gameObject.GetComponent<Second_Zombie>();
         Rocket_Zombie rocket_zombie = collision.gameObject.GetComponent<Rocket_Zombie>();
+        Rocket rocket = collision.gameObject.GetComponent<Rocket>();
 
         if (zombie != null)
         {
@@ -34,6 +35,11 @@ public class M4_bullet : MonoBehaviour
         if( rocket_zombie != null)
         {
             rocket_zombie.health -= 10f;
+        }
+
+        if(rocket != null)
+        {
+            rocket.health -= 100f;
         }
 
     }

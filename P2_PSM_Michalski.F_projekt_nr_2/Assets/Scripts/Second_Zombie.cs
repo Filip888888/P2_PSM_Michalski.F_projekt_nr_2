@@ -11,10 +11,12 @@ public class Second_Zombie : MonoBehaviour
     public float speed = 5f;
     public float health = 100f;
     private bool victim_one_alive = true;
+    GameManager gameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         victim1 = GameObject.Find("MP_Female_A1F Woman").transform;
         victim2 = GameObject.Find("MP_Male_A1F Man").transform;
         agent = GetComponent<NavMeshAgent>();
@@ -54,6 +56,7 @@ public class Second_Zombie : MonoBehaviour
         if (health <= 0f)
         {
             Destroy(gameObject);
+            gameManager.kill_count++;
         }
 
         if (victim1 == null) victim_one_alive = false;

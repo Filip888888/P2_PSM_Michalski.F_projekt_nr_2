@@ -5,10 +5,12 @@ public class Rocket_Zombie : MonoBehaviour
 
     private Transform back_rotor;
     public float health = 300f;
+    GameManager manager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        manager = FindObjectOfType<GameManager>();
         back_rotor = GameObject.Find("Back_Rotor").transform;
     }
 
@@ -19,6 +21,7 @@ public class Rocket_Zombie : MonoBehaviour
 
         if(health <= 0f)
         {
+            manager.kill_count++;
             Destroy(gameObject);
         }
 

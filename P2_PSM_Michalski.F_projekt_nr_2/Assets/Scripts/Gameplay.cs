@@ -91,7 +91,7 @@ public class Gameplay : MonoBehaviour
         
         if (kill_count == 31 && SceneManager.GetActiveScene().name == "SampleScene")
         {
-            SceneManager.LoadScene("LvL_2", LoadSceneMode.Single);
+            SceneManager.LoadScene("cutscene", LoadSceneMode.Single);
         }
     }
 

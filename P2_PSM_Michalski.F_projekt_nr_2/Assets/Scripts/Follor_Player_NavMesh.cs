@@ -1,5 +1,7 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Follor_Player_NavMesh : MonoBehaviour
 {
@@ -20,5 +22,11 @@ public class Follor_Player_NavMesh : MonoBehaviour
     void Update()
     {
         agent.SetDestination(ObJeCt.position);
+
+        if(health <= 0f)
+        {
+            SceneManager.LoadScene("cutscene", LoadSceneMode.Single);
+        }
+
     }
 }
