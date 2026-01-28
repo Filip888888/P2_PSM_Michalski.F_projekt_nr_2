@@ -11,7 +11,7 @@ public class Rocket : MonoBehaviour
     public Transform rocekt_position;
     public float health = 100f;
     Follor_Player_NavMesh helicopter;
-    private float shoot_delay = 5f;
+    private float shoot_delay = 10f;
     [SerializeField]
     float shooted;
     

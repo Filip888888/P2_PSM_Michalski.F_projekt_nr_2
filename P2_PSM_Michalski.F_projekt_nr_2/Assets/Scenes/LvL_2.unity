@@ -2136,7 +2136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c1c139fa281a442aab404ce2e3169d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rocket_Zombie
-  health: 300
+  health: 200
 --- !u!1 &517377047
 GameObject:
   m_ObjectHideFlags: 0
@@ -20072,15 +20072,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4055397270004146198, guid: 32988a3b79b22554982cd1cde72bfed7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -101.52671
+      value: -120.97
       objectReference: {fileID: 0}
     - target: {fileID: 4055397270004146198, guid: 32988a3b79b22554982cd1cde72bfed7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.6909204
+      value: -2.78
       objectReference: {fileID: 0}
     - target: {fileID: 4055397270004146198, guid: 32988a3b79b22554982cd1cde72bfed7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 88.37941
+      value: 104.23
       objectReference: {fileID: 0}
     - target: {fileID: 4055397270004146198, guid: 32988a3b79b22554982cd1cde72bfed7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23281,7 +23281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4055397270004146198, guid: 32988a3b79b22554982cd1cde72bfed7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -96.80768
+      value: -120.8
       objectReference: {fileID: 0}
     - target: {fileID: 4055397270004146198, guid: 32988a3b79b22554982cd1cde72bfed7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23289,7 +23289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4055397270004146198, guid: 32988a3b79b22554982cd1cde72bfed7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 40.84412
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4055397270004146198, guid: 32988a3b79b22554982cd1cde72bfed7, type: 3}
       propertyPath: m_LocalRotation.w

@@ -29,12 +29,12 @@ public class M4_bullet : MonoBehaviour
 
         if (secons_zombie != null)
         {
-            secons_zombie.health -= 10f;
+            secons_zombie.health -= 20f;
         }
 
         if( rocket_zombie != null)
         {
-            rocket_zombie.health -= 10f;
+            rocket_zombie.health -= 20f;
         }
 
         if(rocket != null)

@@ -4,7 +4,7 @@ public class Rocket_Zombie : MonoBehaviour
 {
 
     private Transform back_rotor;
-    public float health = 300f;
+    public float health = 200f;
     GameManager manager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
